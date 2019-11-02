@@ -1,0 +1,42 @@
+[LOG 10:16:56.290] ******* Log Initiated for Kerbal Space Program - 1.7.3.2594 (WindowsPlayer x64) ru *******
+Kerbal Space Program - 1.7.3.2594 (WindowsPlayer x64) ru
+
+
+OS: Windows 10  (10.0.0) 64bit
+CPU: Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz (4)
+RAM: 8108
+GPU: AMD Radeon HD 8670M (2036MB)
+SM: 30 (Direct3D 9.0c [aticfx64.dll 8.17.10.1395])
+RT Formats: ARGB32, Depth, ARGBHalf, Shadowmap, RGB565, ARGB4444, ARGB1555, Default, ARGB2101010, DefaultHDR, ARGB64, ARGBFloat, RGFloat, RGHalf, RFloat, RHalf, R8, RG32
+
+
+Log started: Sat, Nov 02, 2019 10:16:56
+
+
+[LOG 10:16:57.067] Loading data opt-out preferences from PlayerPrefs
+[LOG 10:16:57.271] Requesting data opt-out preferences from https://data-optout-service.uca.cloud.unity3d.com/player/opt_out?appid=39811e89-d29d-4faa-bb01-997f3cda24f0&userid=3bf4493d3c33f744fa48be8b874d6803&deviceid=80840226d49e3be3518ed2d8d8e754deecadac0f
+[LOG 10:16:57.676] [SpaceNavigatorWindows]: No device found.
+[LOG 10:16:57.700] AppCanvas MASK: 3458764513820540928
+[LOG 10:16:58.490] ActionCanvas MASK: 3458764513820540928
+[LOG 10:16:58.490] MainCanvas MASK: 3458764513820540928
+[LOG 10:16:58.550] PhysicsGlobals: Loading database
+[LOG 10:16:59.577] Opt-out preferences successfully retrieved, applied and saved:
+{"optOut":false,"analyticsEnabled":true,"deviceStatsEnabled":true,"limitUserTracking":false,"performanceReportingEnabled":true}
+[ERR 10:16:59.601] Failed to decompress data for the AssetBundle 'Memory'.
+
+[ERR 10:16:59.602] FontLoader: Bundle is null
+
+[WRN 10:17:00.375] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\000_FilterExtensions\LN_fix_squad_categories.cfg'.
+[WRN 10:17:01.899] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\000_FilterExtensions_Configs\Default\Mod_AJE.cfg'.
+[ERR 10:17:14.351] Error: Empty part config file
+
+[WRN 10:17:14.351] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\capacitor250\capacitor-25.cfg'.
+[ERR 10:17:15.383] Error: Empty part config file
+
+[WRN 10:17:15.383] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\TankRevamp\EC2501.cfg'.
+[ERR 10:17:15.728] Error: Empty part config file
+
+[WRN 10:17:15.728] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\WrapperTank\WrapperTank large.cfg'.
+[ERR 10:17:15.729] Error: Empty part config file
+
+[WRN 10:17:15.730] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\WrapperTank\WrapperTank medium.cfg'.

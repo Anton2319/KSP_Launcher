@@ -33,23 +33,24 @@ public class Main extends Application {
             versionsDir.mkdir();
         }
 
-        //Обновляем список версий
-        String[] versList = new String[5];
-        try {
-            versList[0] = (String) versionList().get(0);
-            versList[1] = (String) versionList().get(1);
-            versList[2] = (String) versionList().get(2);
-            versList[3] = (String) versionList().get(3);
-            versList[4] = (String) versionList().get(4);
-        } catch (FileNotFoundException e) {
-            File list = new File("versionList.txt");
-            list.createNewFile();
-            versList[0] = (String) versionList().get(0);
-            versList[1] = (String) versionList().get(1);
-            versList[2] = (String) versionList().get(2);
-            versList[3] = (String) versionList().get(3);
-            versList[4] = (String) versionList().get(4);
+        //Создаём выпадающее меню для выбора версии
+        ObservableList<String> listVers = FXCollections.observableArrayList();
+        int i;
+        i = 0;
+        while(i < versionList().size()) {
+            listVers.add((String) versionList().get(i));
+            i++;
         }
+        i--;
+        ChoiceBox<String> versionChoiceBox = new ChoiceBox<String>(listVers);
+        versionChoiceBox.setValue((String) versionList().get(i));
+        versionChoiceBox.setLayoutX(640);
+        versionChoiceBox.setLayoutY(539);
+        versionChoiceBox.setMinWidth(140);
+        versionChoiceBox.setMaxWidth(140);
+        versionChoiceBox.setMinHeight(30);
+        versionChoiceBox.setMaxHeight(30);
+        root.getChildren().add(versionChoiceBox);
 
         //Создаём и добавляем кнопку
         final Button start = new Button("Запустить");
@@ -64,29 +65,16 @@ public class Main extends Application {
         start.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                File file =new File("versions/1.7.3/ksp.exe");
-                try {
-                    Desktop.getDesktop().open(file);
-                } catch (IOException e) {
-                    JOptionPane.showMessageDialog(null, "Запустить KSP не удалось!");
-                    e.printStackTrace();
+                File file = new File("versions/"+versionChoiceBox.getValue()+"/KSP_x64.exe");
+                    try {
+                        Desktop.getDesktop().open(file);
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "Запустить KSP не удалось!");
+                        e.printStackTrace();
+                    }
                 }
-            }
-        });
-        root.getChildren().addAll(start);
-
-        //Создаём выпадающее меню для выбора версии
-        ObservableList<String> langs = FXCollections.observableArrayList(versList[4], versList[3], versList[2], versList[1], versList[0]);
-        ChoiceBox<String> versionChoiceBox = new ChoiceBox<String>(langs);
-        versionChoiceBox.setValue(versList[4]);
-        versionChoiceBox.setLayoutX(700);
-        versionChoiceBox.setLayoutY(539);
-        versionChoiceBox.setMinWidth(80);
-        versionChoiceBox.setMaxWidth(80);
-        versionChoiceBox.setMinHeight(30);
-        versionChoiceBox.setMaxHeight(30);
-        root.getChildren().add(versionChoiceBox);
-
+            });
+            root.getChildren().addAll(start);
         //Cоздаём ImageView для фона
         File file = new File("bg.png");
         Image image = new Image(file.toURI().toString());
@@ -96,7 +84,6 @@ public class Main extends Application {
         bg.toBack();
         root.getChildren().add(bg);
         root.getChildren().get(root.getChildren().size() - 1).toBack();
-
 
         //Создаём сцену и задаём параметры
         final Scene scene = new Scene(root, 950, 575);
