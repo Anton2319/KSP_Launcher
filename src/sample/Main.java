@@ -15,9 +15,10 @@ import javafx.scene.image.ImageView;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -31,6 +32,40 @@ public class Main extends Application {
         if(versionsDir.isDirectory()) {}
         else {
             versionsDir.mkdir();
+        }
+
+        //Провряем, есть ли файл versionList
+        File versionListFile = new File("versionList.txt");
+        if(versionListFile.exists()) {}
+        else {
+            //Если нет, пытаемся скачать
+            try {
+                JOptionPane.showMessageDialog(null,"Подождите, пока нужные файлы загрузятся\nиз интернета");
+                URL website = new URL("https://downloads.sourceforge.net/project/ksp-launcher/versionList.txt?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fksp-launcher%2Ffiles%2FversionList.txt%2Fdownload%3Fuse_mirror%3Dnetcologne%26r%3Dhttps%253A%252F%252Fsourceforge.net%252Fprojects%252Fksp-launcher%252Ffiles%252F%26use_mirror%3Dmaster&ts=1572712225");
+                ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+                FileOutputStream fos = new FileOutputStream("versionList.txt");
+                fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+            }
+            catch (Exception e) {
+                //Если не получилось - создаём файл с сообщением о неудаче
+                versionListFile.createNewFile();
+                try(FileWriter writer = new FileWriter("versionList.txt", false))
+                {
+                    String text = "СБОЙ СОЕДИНЕНИЯ!";
+                    String text1 = "Не удалось получить список версий";
+                    String text2 = "Удалите файл versionList.txt, подключитесь к интернету и попробуйте снова";
+                    writer.write(text);
+                    writer.append('\n');
+                    writer.write(text1);
+                    writer.append('\n');
+                    writer.write(text2);
+                    JOptionPane.showMessageDialog(null, text+"\n"+text1+"\n"+text2);
+                }
+                catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "Не удалось записать данные в файл");
+                    System.out.println(ex.getMessage());
+                }
+            }
         }
 
         //Создаём выпадающее меню для выбора версии
@@ -52,7 +87,7 @@ public class Main extends Application {
         versionChoiceBox.setMaxHeight(30);
         root.getChildren().add(versionChoiceBox);
 
-        //Создаём и добавляем кнопку
+        //Создаём и добавляем кнопку запуска
         final Button start = new Button("Запустить");
         start.toFront();
         start.setStyle("-fx-background-color: green; -fx-text-fill: white; -fx-background-radius: 0px; fx-border-radius: 0px; -fx-text-fill: white;");
@@ -74,7 +109,31 @@ public class Main extends Application {
                     }
                 }
             });
-            root.getChildren().addAll(start);
+        root.getChildren().addAll(start);
+
+        //Создаём и добавляем кнопку настроек
+        final Button settings = new Button("Настройки");
+        settings.toFront();
+        //start.setStyle("-fx-background-color: green; -fx-text-fill: white; -fx-background-radius: 0px; fx-border-radius: 0px; -fx-text-fill: white;");
+        settings.setMinWidth(120);
+        settings.setMaxWidth(120);
+        settings.setMinHeight(30);
+        settings.setMaxHeight(30);
+        settings.setLayoutX(20);
+        settings.setLayoutY(539);
+        settings.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Settings settings = new Settings();
+                try {
+                    settings.start(stage);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        root.getChildren().addAll(settings);
+
         //Cоздаём ImageView для фона
         File file = new File("bg.png");
         Image image = new Image(file.toURI().toString());
@@ -97,6 +156,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
     public static ArrayList versionList() throws FileNotFoundException {
         ArrayList versions = new ArrayList();

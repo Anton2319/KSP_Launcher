@@ -1,42 +1,234 @@
-[LOG 10:16:56.290] ******* Log Initiated for Kerbal Space Program - 1.7.3.2594 (WindowsPlayer x64) ru *******
-Kerbal Space Program - 1.7.3.2594 (WindowsPlayer x64) ru
+[LOG 19:38:59.140] ******* Log Initiated for Kerbal Space Program - 1.8.0.2686 (WindowsPlayer x64) ru *******
+Kerbal Space Program - 1.8.0.2686 (WindowsPlayer x64) ru
 
 
 OS: Windows 10  (10.0.0) 64bit
 CPU: Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz (4)
 RAM: 8108
 GPU: AMD Radeon HD 8670M (2036MB)
-SM: 30 (Direct3D 9.0c [aticfx64.dll 8.17.10.1395])
-RT Formats: ARGB32, Depth, ARGBHalf, Shadowmap, RGB565, ARGB4444, ARGB1555, Default, ARGB2101010, DefaultHDR, ARGB64, ARGBFloat, RGFloat, RGHalf, RFloat, RHalf, R8, RG32
+SM: 50 (Direct3D 11.0 [level 11.1])
+RT Formats: ARGB32, Depth, ARGBHalf, Shadowmap, RGB565, ARGB4444, ARGB1555, Default, ARGB2101010, DefaultHDR, ARGB64, ARGBFloat, RGFloat, RGHalf, RFloat, RHalf, R8, ARGBInt, RGInt, RInt, BGRA32, RGB111110Float, RG32, RGBAUShort, RG16, BGRA10101010_XR, BGR101010_XR, R16
 
 
-Log started: Sat, Nov 02, 2019 10:16:56
+Log started: Sat, Nov 02, 2019 19:38:59
 
 
-[LOG 10:16:57.067] Loading data opt-out preferences from PlayerPrefs
-[LOG 10:16:57.271] Requesting data opt-out preferences from https://data-optout-service.uca.cloud.unity3d.com/player/opt_out?appid=39811e89-d29d-4faa-bb01-997f3cda24f0&userid=3bf4493d3c33f744fa48be8b874d6803&deviceid=80840226d49e3be3518ed2d8d8e754deecadac0f
-[LOG 10:16:57.676] [SpaceNavigatorWindows]: No device found.
-[LOG 10:16:57.700] AppCanvas MASK: 3458764513820540928
-[LOG 10:16:58.490] ActionCanvas MASK: 3458764513820540928
-[LOG 10:16:58.490] MainCanvas MASK: 3458764513820540928
-[LOG 10:16:58.550] PhysicsGlobals: Loading database
-[LOG 10:16:59.577] Opt-out preferences successfully retrieved, applied and saved:
-{"optOut":false,"analyticsEnabled":true,"deviceStatsEnabled":true,"limitUserTracking":false,"performanceReportingEnabled":true}
-[ERR 10:16:59.601] Failed to decompress data for the AssetBundle 'Memory'.
+[LOG 19:38:59.227] ActionCanvas MASK: 3458764513820540928
+[LOG 19:38:59.229] AppCanvas MASK: 3458764513820540928
+[LOG 19:38:59.235] MainCanvas MASK: 3458764513820540928
+[LOG 19:39:04.443] Load(Assembly): Squad/Plugins/KSPSteamCtrlr
+[LOG 19:39:04.444] AssemblyLoader: Loading assembly at C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.8.0 On Unity 2019.2\GameData\Squad\Plugins\KSPSteamCtrlr.dll
+[LOG 19:39:04.532] AssemblyLoader: Loading assemblies
+[LOG 19:39:04.651] VesselModules: Found VesselModule of type AxisGroupsModule with order 999
+[LOG 19:39:04.654] VesselModules: Found VesselModule of type FlightIntegrator with order 0
+[LOG 19:39:04.675] VesselModules: Found VesselModule of type CommNetVessel with order 999
+[LOG 19:39:04.679] VesselModules: Found 3 VesselModule types
+[LOG 19:39:04.720] 
+************************************************************************
 
-[ERR 10:16:59.602] FontLoader: Bundle is null
+Environment Info
+Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe 
 
-[WRN 10:17:00.375] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\000_FilterExtensions\LN_fix_squad_categories.cfg'.
-[WRN 10:17:01.899] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\000_FilterExtensions_Configs\Default\Mod_AJE.cfg'.
-[ERR 10:17:14.351] Error: Empty part config file
+Mod DLLs found:
+Stock assembly: Assembly-CSharp v0.0.0.0
+Stock assembly: KSPSteamCtrlr v0.0.1.35
 
-[WRN 10:17:14.351] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\capacitor250\capacitor-25.cfg'.
-[ERR 10:17:15.383] Error: Empty part config file
+Folders and files in GameData:
+Stock folder: Squad
 
-[WRN 10:17:15.383] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\TankRevamp\EC2501.cfg'.
-[ERR 10:17:15.728] Error: Empty part config file
+Info.txt
 
-[WRN 10:17:15.728] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\WrapperTank\WrapperTank large.cfg'.
-[ERR 10:17:15.729] Error: Empty part config file
+************************************************************************
 
-[WRN 10:17:15.730] Cannot create config from file 'C:\Users\anton\IdeaProjects\KSP_Launcher\versions\1.7.3\GameData\InterstellarFuelSwitch\Parts\WrapperTank\WrapperTank medium.cfg'.
+[LOG 19:39:04.752] [AddonLoader]: Instantiating addon 'KSPSteamController' from assembly 'KSPSteamCtrlr'
+[LOG 19:39:06.113] Load(Audio): Squad/Sounds/editorLoop01
+[LOG 19:39:07.065] Load(Audio): Squad/Sounds/elev_loop
+[LOG 19:39:07.081] Load(Audio): Squad/Sounds/elev_start
+[LOG 19:39:07.115] Load(Audio): Squad/Sounds/elev_stop
+[LOG 19:39:07.138] Load(Audio): Squad/Sounds/sound_ambience_nature
+[LOG 19:39:07.302] Load(Audio): Squad/Sounds/sound_click_flick
+[LOG 19:39:07.346] Load(Audio): Squad/Sounds/sound_click_latch
+[LOG 19:39:07.380] Load(Audio): Squad/Sounds/sound_click_sharp
+[LOG 19:39:07.415] Load(Audio): Squad/Sounds/sound_click_tick
+[LOG 19:39:07.437] Load(Audio): Squad/Sounds/sound_click_tock
+[LOG 19:39:07.472] Load(Audio): Squad/Sounds/sound_decoupler_fire
+[LOG 19:39:07.506] Load(Audio): Squad/Sounds/sound_delete_bin
+[LOG 19:39:07.541] Load(Audio): Squad/Sounds/sound_explosion_debris1
+[LOG 19:39:07.711] Load(Audio): Squad/Sounds/sound_explosion_debris2
+[LOG 19:39:07.781] Load(Audio): Squad/Sounds/sound_explosion_large
+[LOG 19:39:07.896] Load(Audio): Squad/Sounds/sound_rocket_mini
+[LOG 19:39:07.918] Load(Audio): Squad/Sounds/sound_rocket_spurts
+[LOG 19:39:07.953] Load(Audio): Squad/Sounds/sound_servomotor
+[LOG 19:39:07.975] Load(Audio): Squad/Sounds/sound_tab_extend
+[LOG 19:39:07.998] Load(Audio): Squad/Sounds/sound_tab_retreat
+[LOG 19:39:08.010] Load(Texture): Squad/Agencies/C7AerospaceDivision
+[LOG 19:39:08.044] Load(Texture): Squad/Agencies/C7AerospaceDivision_scaled
+[LOG 19:39:08.120] Load(Texture): Squad/Agencies/DinkelsteinKermansConstructionEmporium
+[LOG 19:39:08.144] Load(Texture): Squad/Agencies/DinkelsteinKermansConstructionEmporium_scaled
+[LOG 19:39:08.163] Load(Texture): Squad/Agencies/ExperimentalEngineering
+[LOG 19:39:08.181] Load(Texture): Squad/Agencies/ExperimentalEngineering_scaled
+[LOG 19:39:08.207] Load(Texture): Squad/Agencies/FlooydResearchLab
+[LOG 19:39:08.222] Load(Texture): Squad/Agencies/FlooydResearchLab_scaled
+[LOG 19:39:08.239] Load(Texture): Squad/Agencies/GoliathNationalProducts
+[LOG 19:39:08.259] Load(Texture): Squad/Agencies/GoliathNationalProducts_scaled
+[LOG 19:39:08.281] Load(Texture): Squad/Agencies/IntegratedIntegrals
+[LOG 19:39:08.299] Load(Texture): Squad/Agencies/IntegratedIntegrals_scaled
+[LOG 19:39:08.319] Load(Texture): Squad/Agencies/IonicSymphonicProtonicElectronics
+[LOG 19:39:08.336] Load(Texture): Squad/Agencies/IonicSymphonicProtonicElectronics_scaled
+[LOG 19:39:08.355] Load(Texture): Squad/Agencies/JebsJunkyard
+[LOG 19:39:08.362] Load(Texture): Squad/Agencies/JebsJunkyard_scaled
+[LOG 19:39:08.383] Load(Texture): Squad/Agencies/KerbalMotion
+[LOG 19:39:08.391] Load(Texture): Squad/Agencies/KerbalMotion_scaled
+[LOG 19:39:08.405] Load(Texture): Squad/Agencies/KerbinWorldFirstRecordKeepingSociety
+[LOG 19:39:08.482] Load(Texture): Squad/Agencies/KerbinWorldFirstRecordKeepingSociety_scaled
+[LOG 19:39:08.502] Load(Texture): Squad/Agencies/Kerbodyne
+[LOG 19:39:08.539] Load(Texture): Squad/Agencies/Kerbodyne_scaled
+[LOG 19:39:08.563] Load(Texture): Squad/Agencies/Kerlington
+[LOG 19:39:08.591] Load(Texture): Squad/Agencies/Kerlington_scaled
+[LOG 19:39:08.615] Load(Texture): Squad/Agencies/MaxoConstructionToys
+[LOG 19:39:08.647] Load(Texture): Squad/Agencies/MaxoConstructionToys_scaled
+[LOG 19:39:08.685] Load(Texture): Squad/Agencies/MovingPartsExpertsGroup
+[LOG 19:39:08.719] Load(Texture): Squad/Agencies/MovingPartsExpertsGroup_scaled
+[LOG 19:39:08.744] Load(Texture): Squad/Agencies/OMBDemolition
+[LOG 19:39:08.761] Load(Texture): Squad/Agencies/OMBDemolition_scaled
+[LOG 19:39:08.774] Load(Texture): Squad/Agencies/PeriapsisCo
+[LOG 19:39:08.792] Load(Texture): Squad/Agencies/PeriapsisCo_scaled
+[LOG 19:39:08.808] Load(Texture): Squad/Agencies/Probodobodyne
+[LOG 19:39:08.817] Load(Texture): Squad/Agencies/Probodobodyne_scaled
+[LOG 19:39:08.832] Load(Texture): Squad/Agencies/R&D
+[LOG 19:39:08.857] Load(Texture): Squad/Agencies/R&D_scaled
+[LOG 19:39:08.875] Load(Texture): Squad/Agencies/ReactionSystemsLtd
+[LOG 19:39:08.900] Load(Texture): Squad/Agencies/ReactionSystemsLtd_scaled
+[LOG 19:39:08.931] Load(Texture): Squad/Agencies/Rockomax
+[LOG 19:39:08.963] Load(Texture): Squad/Agencies/Rockomax_scaled
+[LOG 19:39:08.985] Load(Texture): Squad/Agencies/Rokea
+[LOG 19:39:09.003] Load(Texture): Squad/Agencies/Rokea_scaled
+[LOG 19:39:09.017] Load(Texture): Squad/Agencies/SeansCannery
+[LOG 19:39:09.027] Load(Texture): Squad/Agencies/SeansCannery_scaled
+[LOG 19:39:09.044] Load(Texture): Squad/Agencies/SteadlerEngineeringCorps
+[LOG 19:39:09.056] Load(Texture): Squad/Agencies/SteadlerEngineeringCorps_scaled
+[LOG 19:39:09.078] Load(Texture): Squad/Agencies/StrutCo
+[LOG 19:39:09.099] Load(Texture): Squad/Agencies/StrutCo_scaled
+[LOG 19:39:09.122] Load(Texture): Squad/Agencies/Vac-Co
+[LOG 19:39:09.148] Load(Texture): Squad/Agencies/Vac-Co_scaled
+[LOG 19:39:09.195] Load(Texture): Squad/Agencies/WinterOwl
+[LOG 19:39:09.215] Load(Texture): Squad/Agencies/WinterOwl_scaled
+[LOG 19:39:09.245] Load(Texture): Squad/Agencies/ZaltonicElectronics
+[LOG 19:39:09.249] Load(Texture): Squad/Agencies/ZaltonicElectronics_scaled
+[LOG 19:39:09.276] Load(Texture): Squad/Contracts/Icons/balloon
+[LOG 19:39:09.297] Load(Texture): Squad/Contracts/Icons/custom
+[LOG 19:39:09.313] Load(Texture): Squad/Contracts/Icons/default
+[LOG 19:39:09.340] Load(Texture): Squad/Contracts/Icons/dish
+[LOG 19:39:09.371] Load(Texture): Squad/Contracts/Icons/eva
+[LOG 19:39:09.392] Load(Texture): Squad/Contracts/Icons/gravity
+[LOG 19:39:09.395] Load(Texture): Squad/Contracts/Icons/ksc
+[LOG 19:39:09.429] Load(Texture): Squad/Contracts/Icons/launchsite
+[LOG 19:39:09.438] Load(Texture): Squad/Contracts/Icons/marker
+[LOG 19:39:09.454] Load(Texture): Squad/Contracts/Icons/pressure
+[LOG 19:39:09.469] Load(Texture): Squad/Contracts/Icons/report
+[LOG 19:39:09.477] Load(Texture): Squad/Contracts/Icons/runway
+[LOG 19:39:09.486] Load(Texture): Squad/Contracts/Icons/sample
+[LOG 19:39:09.492] Load(Texture): Squad/Contracts/Icons/seismic
+[LOG 19:39:09.503] Load(Texture): Squad/Contracts/Icons/thermometer
+[LOG 19:39:09.515] Load(Texture): Squad/Contracts/Icons/vessel
+[LOG 19:39:09.527] Load(Texture): Squad/Flags/09
+[LOG 19:39:09.553] Load(Texture): Squad/Flags/B612_Foundation_flag
+[LOG 19:39:09.584] Load(Texture): Squad/Flags/blorbs
+[LOG 19:39:09.615] Load(Texture): Squad/Flags/bullseye
+[LOG 19:39:09.639] Load(Texture): Squad/Flags/capsule
+[LOG 19:39:09.653] Load(Texture): Squad/Flags/circles
+[LOG 19:39:09.678] Load(Texture): Squad/Flags/default
+[LOG 19:39:09.691] Load(Texture): Squad/Flags/esa_dark_blue
+[LOG 19:39:09.756] Load(Texture): Squad/Flags/hexagon
+[LOG 19:39:09.840] Load(Texture): Squad/Flags/hexagonCircles
+[LOG 19:39:09.948] Load(Texture): Squad/Flags/kerbal1
+[LOG 19:39:10.032] Load(Texture): Squad/Flags/kerbal2
+[LOG 19:39:10.116] Load(Texture): Squad/Flags/kerbin
+[LOG 19:39:10.201] Load(Texture): Squad/Flags/kerbinmunflag
+[LOG 19:39:10.259] Load(Texture): Squad/Flags/line
+[LOG 19:39:10.272] Load(Texture): Squad/Flags/minimalistic
+[LOG 19:39:10.288] Load(Texture): Squad/Flags/NASA
+[LOG 19:39:10.308] Load(Texture): Squad/Flags/orbit
+[LOG 19:39:10.330] Load(Texture): Squad/Flags/orbs
+[LOG 19:39:10.348] Load(Texture): Squad/Flags/retro
+[LOG 19:39:10.371] Load(Texture): Squad/Flags/rings
+[LOG 19:39:10.385] Load(Texture): Squad/Flags/rocketScience
+[LOG 19:39:10.407] Load(Texture): Squad/Flags/satellite
+[LOG 19:39:10.438] Load(Texture): Squad/Flags/Sentinel_Flag
+[LOG 19:39:10.456] Load(Texture): Squad/Flags/spheres
+[LOG 19:39:10.482] Load(Texture): Squad/Flags/squadLogo
+[LOG 19:39:10.503] Load(Texture): Squad/Flags/squadLogo2
+[LOG 19:39:10.515] Load(Texture): Squad/Flags/stripes
+[LOG 19:39:10.537] Load(Texture): Squad/Flags/trees
+[LOG 19:39:10.559] Load(Texture): Squad/Flags/trippy
+[LOG 19:39:10.585] Load(Texture): Squad/Flags/uk_space_agency
+[LOG 19:39:10.596] Load(Texture): Squad/FX/DiamondBlue
+[LOG 19:39:10.612] Load(Texture): Squad/FX/FlameBlueOrange
+[LOG 19:39:10.628] Load(Texture): Squad/FX/FlamePurple
+[LOG 19:39:10.643] Load(Texture): Squad/FX/FlameRed
+[LOG 19:39:10.646] Load(Texture): Squad/FX/FlameRedOrange
+[LOG 19:39:10.658] Load(Texture): Squad/FX/Monoprop
+[LOG 19:39:10.667] Load(Texture): Squad/FX/plasma2
+[LOG 19:39:10.676] Load(Texture): Squad/FX/rocketplume2
+[LOG 19:39:10.690] Load(Texture): Squad/FX/shockDiamond2
+[LOG 19:39:10.702] Load(Texture): Squad/FX/smokepuff1
+[LOG 19:39:10.709] Load(Texture): Squad/Interiors/Administration/AdminBuilding_Lvl1
+[LOG 19:39:10.781] Load(Texture): Squad/Interiors/Administration/AdminBuilding_Lvl2
+[LOG 19:39:10.863] Load(Texture): Squad/Interiors/Administration/AdminBuilding_Lvl3
+[LOG 19:39:10.974] Load(Texture): Squad/MenuProps/MunOrBust
+[LOG 19:39:11.003] Load(Texture): Squad/PartList/SimpleIcons/cs_main
+[LOG 19:39:11.025] Load(Texture): Squad/PartList/SimpleIcons/cs_mk2
+[LOG 19:39:11.036] Load(Texture): Squad/PartList/SimpleIcons/cs_mk3
+[LOG 19:39:11.057] Load(Texture): Squad/PartList/SimpleIcons/cs_size0
+[LOG 19:39:11.078] Load(Texture): Squad/PartList/SimpleIcons/cs_size1
+[LOG 19:39:11.089] Load(Texture): Squad/PartList/SimpleIcons/cs_size1p5
+[LOG 19:39:11.110] Load(Texture): Squad/PartList/SimpleIcons/cs_size2
+[LOG 19:39:11.131] Load(Texture): Squad/PartList/SimpleIcons/cs_size3
+[LOG 19:39:11.142] Load(Texture): Squad/PartList/SimpleIcons/cs_size4
+[LOG 19:39:11.163] Load(Texture): Squad/PartList/SimpleIcons/cs_surface
+[LOG 19:39:11.184] Load(Texture): Squad/PartList/SimpleIcons/deployed_science_control_unit
+[LOG 19:39:11.195] Load(Texture): Squad/PartList/SimpleIcons/deployed_science_experiment
+[LOG 19:39:11.206] Load(Texture): Squad/PartList/SimpleIcons/deployed_science_part
+[LOG 19:39:11.217] Load(Texture): Squad/PartList/SimpleIcons/fuels_monopropellant
+[LOG 19:39:11.240] Load(Texture): Squad/PartList/SimpleIcons/fuels_ore
+[LOG 19:39:11.251] Load(Texture): Squad/PartList/SimpleIcons/fuels_oxidizer
+[LOG 19:39:11.262] Load(Texture): Squad/PartList/SimpleIcons/fuels_solidfuel
+[LOG 19:39:11.272] Load(Texture): Squad/PartList/SimpleIcons/fuels_xenongas
+[LOG 19:39:11.295] Load(Texture): Squad/PartList/SimpleIcons/number1
+[LOG 19:39:11.308] Load(Texture): Squad/PartList/SimpleIcons/number2
+[LOG 19:39:11.328] Load(Texture): Squad/PartList/SimpleIcons/number3
+[LOG 19:39:11.340] Load(Texture): Squad/PartList/SimpleIcons/number4
+[LOG 19:39:11.360] Load(Texture): Squad/PartList/SimpleIcons/number5
+[LOG 19:39:11.371] Load(Texture): Squad/PartList/SimpleIcons/number6
+[LOG 19:39:11.381] Load(Texture): Squad/PartList/SimpleIcons/number7
+[LOG 19:39:11.393] Load(Texture): Squad/PartList/SimpleIcons/number8
+[LOG 19:39:11.415] Load(Texture): Squad/PartList/SimpleIcons/number9
+[LOG 19:39:11.426] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advaerodynamics
+[LOG 19:39:11.448] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advancedmotors
+[LOG 19:39:11.470] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advconstruction
+[LOG 19:39:11.481] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advelectrics
+[LOG 19:39:11.492] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advexploration
+[LOG 19:39:11.525] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advflightcontrol
+[LOG 19:39:11.547] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advlanding
+[LOG 19:39:11.569] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advmetalworks
+[LOG 19:39:11.581] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advrocketry
+[LOG 19:39:11.604] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advsciencetech
+[LOG 19:39:11.615] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_advunmanned
+[LOG 19:39:11.626] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_aerodynamicsystems
+[LOG 19:39:11.638] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_aerospacetech
+[LOG 19:39:11.662] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_automation
+[LOG 19:39:11.673] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_basicprobes
+[LOG 19:39:11.685] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_basicrocketry
+[LOG 19:39:11.718] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_composites
+[LOG 19:39:11.728] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_electrics
+[LOG 19:39:11.739] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_electronics
+[LOG 19:39:11.751] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_evatech
+[LOG 19:39:11.762] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_experimentalaerodynamics
+[LOG 19:39:11.818] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_experimentalelectrics
+[LOG 19:39:11.893] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_experimentalmotors
+[LOG 19:39:11.968] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_experimentalrocketry
+[LOG 19:39:12.044] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_experimentalscience
+[LOG 19:39:12.119] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_fieldscience
+[LOG 19:39:12.194] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_flightcontrol
+[LOG 19:39:12.301] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_fuelsystems
+[LOG 19:39:12.377] Load(Texture): Squad/PartList/SimpleIcons/R&D_node_icon_generalconstruction
