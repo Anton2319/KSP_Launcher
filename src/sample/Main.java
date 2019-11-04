@@ -27,6 +27,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception{
         Pane root = new Pane();
+        Files checkFiles = new Files();
         //Проверяем, есть ли папка versions
         File versionsDir = new File("versions");
         if(versionsDir.isDirectory()) {}
@@ -34,39 +35,8 @@ public class Main extends Application {
             versionsDir.mkdir();
         }
 
-        //Провряем, есть ли файл versionList
-        File versionListFile = new File("versionList.txt");
-        if(versionListFile.exists()) {}
-        else {
-            //Если нет, пытаемся скачать
-            try {
-                JOptionPane.showMessageDialog(null,"Подождите, пока нужные файлы загрузятся\nиз интернета");
-                URL website = new URL("https://downloads.sourceforge.net/project/ksp-launcher/versionList.txt?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fksp-launcher%2Ffiles%2FversionList.txt%2Fdownload%3Fuse_mirror%3Dnetcologne%26r%3Dhttps%253A%252F%252Fsourceforge.net%252Fprojects%252Fksp-launcher%252Ffiles%252F%26use_mirror%3Dmaster&ts=1572712225");
-                ReadableByteChannel rbc = Channels.newChannel(website.openStream());
-                FileOutputStream fos = new FileOutputStream("versionList.txt");
-                fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
-            }
-            catch (Exception e) {
-                //Если не получилось - создаём файл с сообщением о неудаче
-                versionListFile.createNewFile();
-                try(FileWriter writer = new FileWriter("versionList.txt", false))
-                {
-                    String text = "СБОЙ СОЕДИНЕНИЯ!";
-                    String text1 = "Не удалось получить список версий";
-                    String text2 = "Удалите файл versionList.txt, подключитесь к интернету и попробуйте снова";
-                    writer.write(text);
-                    writer.append('\n');
-                    writer.write(text1);
-                    writer.append('\n');
-                    writer.write(text2);
-                    JOptionPane.showMessageDialog(null, text+"\n"+text1+"\n"+text2);
-                }
-                catch(Exception ex){
-                    JOptionPane.showMessageDialog(null, "Не удалось записать данные в файл");
-                    System.out.println(ex.getMessage());
-                }
-            }
-        }
+        //Провряем, есть ли все необходимые файлы
+        checkFiles.checkFiles(stage);
 
         //Создаём выпадающее меню для выбора версии
         ObservableList<String> listVers = FXCollections.observableArrayList();
@@ -150,7 +120,6 @@ public class Main extends Application {
         scene.getStylesheets().add("/style.css");
         stage.show();
         stage.setTitle("KSP Launcher");
-
     }
 
 
