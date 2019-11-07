@@ -15,11 +15,9 @@ import net.lingala.zip4j.*;
 import net.lingala.zip4j.exception.ZipException;
 
 public class Files {
-    GUIMessages message = new GUIMessages();
-    public void checkFiles(Stage stage) {
-        //Получаем каталог в котором запущена программа
-        String root = System.getProperty("user.dir");
-
+    private static GUIMessages message;
+    public static boolean checkFiles(String root) {
+        Stage stage = new Stage();
         //Проверяем, есть ли папка versions
         File versionsDir = new File("versions");
         if(versionsDir.isDirectory()) {}
@@ -30,11 +28,13 @@ public class Files {
         //Провряем, есть ли файл versionList
         File versionListFile = new File("versionList.txt");
         File bgFile = new File("bg.png");
-        if(versionListFile.exists() && bgFile.exists()) {}
+        if(versionListFile.exists() && bgFile.exists()) {
+            return true;
+        }
         else {
             //Если нет, пытаемся скачать
             try {
-                message.showMessage("Подождите, пока нужные файлы загрузятся\nиз интернета", stage);
+                message.showMessage("Подождите, пока нужные файлы загрузятся\nиз интернета");
                 //Загружаем файлы в виде архива
                 URL website = new URL("http://ksplauncher.000webhostapp.com/files.zip");
                 ReadableByteChannel rbc = Channels.newChannel(website.openStream());
@@ -45,7 +45,7 @@ public class Files {
                     ZipFile zipFile = new ZipFile("files.zip");
                     zipFile.extractAll(root);
                 } catch (Exception e) {
-                    message.showError("Не удалось распаковать файл\nВы уверены, что у вас есть права работать с этой папкой?", stage);
+                    message.showError("Не удалось распаковать файл\nВы уверены, что у вас есть права работать с этой папкой?");
                     e.printStackTrace();
                 }
             }
@@ -54,7 +54,7 @@ public class Files {
                 try {
                     versionListFile.createNewFile();
                 } catch (Exception ex) {
-                    message.showMessage("Не удалось создать файл\nВы уверены, что у вас есть права работать с этой папкой?", stage);
+                    message.showMessage("Не удалось создать файл\nВы уверены, что у вас есть права работать с этой папкой?");
                     ex.printStackTrace();
                 }
                 try(FileWriter writer = new FileWriter("versionList.txt", false))
@@ -67,13 +67,14 @@ public class Files {
                     writer.write(text1);
                     writer.append('\n');
                     writer.write(text2);
-                    message.showError(text+"\n"+text1+"\n"+text2, stage);
+                    message.showError(text+"\n"+text1+"\n"+text2);
                 }
                 catch(Exception ex){
-                    JOptionPane.showMessageDialog(null,"Не удалось записать данные в файл\nВы уверены, что у вас есть права работать с этой папкой?");
+                    message.showMessage("Не удалось записать данные в файл\nВы уверены, что у вас есть права работать с этой папкой?");
                     System.out.println(ex.getMessage());
                 }
             }
+        return false;
         }
     }
 }

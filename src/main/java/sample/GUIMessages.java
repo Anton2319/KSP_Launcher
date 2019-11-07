@@ -6,12 +6,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import javax.swing.*;
 
 public class GUIMessages {
-    public void showMessage(String text, Stage stage) {
+    public void showMessage(String text) {
+        Stage stage = new Stage();
         Pane root = new Pane();
         final Button ok = new Button("OK");
         ok.toFront();
@@ -32,8 +34,9 @@ public class GUIMessages {
         stage.show();
         stage.setTitle("KSP Launcher");
     }
-    public void showError(String text, Stage stage) {
-        Pane root = new Pane();
+    public void showError(String text) {
+        Stage stage = new Stage();
+        VBox root = new VBox();
         final Button ok = new Button("OK");
         ok.toFront();
         ok.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 0px; fx-border-radius: 0px; -fx-text-fill: white;");

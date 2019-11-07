@@ -25,19 +25,16 @@ import java.util.Scanner;
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception{
-        Pane root = new Pane();
+    public void start(final Stage stage) throws Exception{
+        String rootDir = System.getProperty("user.dir");
+        //Объявление root переехало вниз для разрешения конфликта с классом GUIMessages
         Files checkFiles = new Files();
-        //Проверяем, есть ли папка versions
-        File versionsDir = new File("versions");
-        if(versionsDir.isDirectory()) {}
-        else {
-            versionsDir.mkdir();
-        }
+        Stage stage1 = new Stage();
 
         //Провряем, есть ли все необходимые файлы
-        checkFiles.checkFiles(stage);
+        checkFiles.checkFiles(rootDir);
 
+        Pane root = new Pane();
         //Создаём выпадающее меню для выбора версии
         ObservableList<String> listVers = FXCollections.observableArrayList();
         int i;
@@ -47,7 +44,7 @@ public class Main extends Application {
             i++;
         }
         i--;
-        ChoiceBox<String> versionChoiceBox = new ChoiceBox<String>(listVers);
+        final ChoiceBox<String> versionChoiceBox = new ChoiceBox<String>(listVers);
         versionChoiceBox.setValue((String) versionList().get(i));
         versionChoiceBox.setLayoutX(640);
         versionChoiceBox.setLayoutY(539);

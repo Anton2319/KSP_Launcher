@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Settings {
-    public void start(Stage stage) throws Exception{
+    public void start(final Stage stage) throws Exception{
         Pane root = new Pane();
 
         Label label = new Label("Источник версий KSP: ");
