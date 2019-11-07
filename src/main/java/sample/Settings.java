@@ -92,7 +92,7 @@ public class Settings {
                         settings.createNewFile();
                     } catch (Exception ex) {
                         ex.printStackTrace();
-                        JOptionPane.showMessageDialog(null, "Не удалось создать файл конфигурации,\nпопробуйте создать его вручную (settings.cfg)");
+                        //GUIMessages.showError("Не удалось создать файл конфигурации,\nпопробуйте создать его вручную (settings.cfg)");
                         System.exit(1);
                     }
                 }

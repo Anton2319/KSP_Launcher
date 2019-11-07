@@ -9,11 +9,15 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
 import javax.swing.*;
 
 public class GUIMessages {
     public void showMessage(String text) {
-        Stage stage = new Stage();
+        final Stage dialog = new Stage();
         Pane root = new Pane();
         final Button ok = new Button("OK");
         ok.toFront();
@@ -29,13 +33,20 @@ public class GUIMessages {
         root.getChildren().addAll(label);
         label.setLayoutX(25);
         label.setLayoutY(25);
+        ok.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                dialog.close();
+            }
+        });
         final Scene scene = new Scene(root, 300, 150);
-        stage.setScene(scene);
-        stage.show();
-        stage.setTitle("KSP Launcher");
+        dialog.setScene(scene);
+        dialog.show();
+        dialog.setTitle("KSP Launcher");
     }
-    public void showError(String text) {
-        Stage stage = new Stage();
+
+    public static void showError(String text) {
+        Stage error = new Stage();
         VBox root = new VBox();
         final Button ok = new Button("OK");
         ok.toFront();
@@ -58,8 +69,12 @@ public class GUIMessages {
         label.setLayoutX(25);
         label.setLayoutY(25);
         final Scene scene = new Scene(root, 300, 150);
-        stage.setScene(scene);
-        stage.show();
-        stage.setTitle("KSP Launcher - ошибка");
+        error.setScene(scene);
+        error.show();
+        error.setTitle("KSP Launcher - ошибка");
+    }
+
+    public void callShowError(String text) {
+        showError(text);
     }
 }

@@ -16,19 +16,16 @@ import javafx.scene.image.ImageView;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import java.net.URL;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main extends Application {
 
     @Override
-    public void start(final Stage stage) throws Exception{
+    public void start(final Stage stage) throws Exception {
         String rootDir = System.getProperty("user.dir");
         //Объявление root переехало вниз для разрешения конфликта с классом GUIMessages
-        Files checkFiles = new Files();
+        FileOperations checkFiles = new FileOperations();
         Stage stage1 = new Stage();
 
         //Провряем, есть ли все необходимые файлы
@@ -39,7 +36,7 @@ public class Main extends Application {
         ObservableList<String> listVers = FXCollections.observableArrayList();
         int i;
         i = 0;
-        while(i < versionList().size()) {
+        while (i < versionList().size()) {
             listVers.add((String) versionList().get(i));
             i++;
         }
@@ -67,15 +64,15 @@ public class Main extends Application {
         start.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                File file = new File("versions/"+versionChoiceBox.getValue()+"/KSP_x64.exe");
-                    try {
-                        Desktop.getDesktop().open(file);
-                    } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, "Запустить KSP не удалось!");
-                        e.printStackTrace();
-                    }
+                File file = new File("versions/" + versionChoiceBox.getValue() + "/KSP_x64.exe");
+                try {
+                    Desktop.getDesktop().open(file);
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Запустить KSP не удалось!");
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
         root.getChildren().addAll(start);
 
         //Создаём и добавляем кнопку настроек
@@ -124,6 +121,7 @@ public class Main extends Application {
         launch(args);
 
     }
+
     public static ArrayList versionList() throws FileNotFoundException {
         ArrayList versions = new ArrayList();
         Scanner in = new Scanner(new File("versionList.txt"));
